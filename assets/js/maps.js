@@ -16,9 +16,8 @@ function initMap () {
     var markers = location.map(function(location, i){
         return new google.maps.Marker({
             position: location,
-            label: label[i % labels.length]
+            label: labels[i % labels.length]
         });
     });
-    var markerCluster = new markerClusterer(maps, markers, 
-        {imagePath: })
+    var markerCluster = new markerClusterer({map, markers});
 }
